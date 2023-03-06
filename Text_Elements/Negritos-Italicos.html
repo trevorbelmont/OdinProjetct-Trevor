@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<!-- open this page on browser to read this lesson metalinguistic absract.-->
+<!-- checking this html validation I discovered that text nodes, <text> 
+  are not quite suitable to aplly CSS or suitable to semantic assigning. 
+  Thus aren't any more than just a piece of text. Though I thought they were a bit more similar to <p> nodes. -->
+
+<html lang = "en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title> Tags de Negritos e Itálicos em HTML </title>
+  </head>
+
+  <body>
+
+    <h1> "strong", "b", "em" e "i" elements (negritos e itálicos).</h1>
+      <h3> NOTES:</h3>    
+    
+      <p>  &emsp; <strong> This example shall be written in English just for the sake of language practice. </strong>
+      <br> &emsp; At this point we have already tryied using some basic raw-text containers, like &lt;p&gt; and &lt;text&gt; -
+        which I tried and differenciated'em in the commented boilerplate example. Thus, they are now assumed as trivial.
+      <br> &emsp; It is also worth noting that, although it isn't recommended, texts may be printed directly inside the body
+        element with no text container at all.
+      <br> <!-- Line Break (Emmet Abbreviation)-->
+        &emsp; We may also use break-lines, &lt;br&gt;, to (obviously) insert line breaks in "text" and "p" (paragraph) elements.</p>
+      
+    <h2> The &lt;strong&gt; and &lt;b&gt; text element tags (bold important texts) </h2>
+      <p> The strong element tags, <b> &lt;strong&gt; ... &lt;/strong&gt;</b>, makes the text in between these tags
+        <strong>bold</strong>. This also confers importance to the text, which maybe used to modolute the tone of voice by
+        screen readers which aid people with visual impairments or disabilities. 
+        
+        <br> It's also possible to make some text <b>bold</b> without making them more imporant <b> using the 
+        tags &lt;b&gt; ... &lt;/b&gt; </b> and also through some other ways using CSS - though I didn't started CSS in Odin Project curriculum yet.
+        
+        <br> <b> &lt;strong&gt;</b> and <b> &lt;b&gt;</b> (strong and "i" elements) may even be used on its own (without a text container as paragraph). But it's a practice to be
+        avoid and also requires unnecessary efforts to break lines, format and adapt to screens.
+        <br> The line below is an example of use of &lt;strong&gt; tags without a text container.
+      </p>
+
+      <br>
+      &emsp; <!-- &emsp; =  tabulação divisível de quatro espaços de character-->
+      <!-- Some other tabulations: &nbsp; ("not-breakable space" of 2 char length) and &ensp; (a breakable tab space of 2 char length) -->
+      "Este é um texto avulso e aplica negrito com <strong> strong</strong> e também com <b>bold</b> tags."
+      <br>
+      <br>
+      
+      <p> As you can check in this page's source code, an extra break line <strong> ( &lt;br&gt; )</strong> and a
+        tabulation space <strong>( &amp;emsp; )</strong> was needed in order to keep the line above separate from the
+        previous and from the current paragraph and format it.
+
+      <br> *Part of this section example WAS originally written with "text" element in order to control the number of line-breaks </p>
+
+    <h2> The &lt;em&gt; and &lt;i&gt; text element tags ( <em>italic emphasized</em> texts)</h2>
+    
+    <p> Similarly we can use <b> &lt;em&gt; ... &lt;/em&gt; </b> tags, to emphasize some parts of our page's texts by making it <em>italic</em>.
+      Just like the &lt;strong&gt; tag, an &lt;em&gt; tag may impact users who are using any type of screen-readers or
+      reading aid. That's because, since italic texts are used to emphasize some information or text fragments in
+      printed texts, these tags may be used to modulate voice or something in order to sonically emphasize the text in
+      between &lt;/em&gt; tags. <br>
+
+      <br> <b> ! ! ! </b> Conversely, the <b> &lt;i&gt; <i> "italic text" </i> &lt;/i&gt; </b> tags may be useful to make some text italic without 
+      attributing any emphasis to it - whenever we chose to use italic for stylistic or any semantic reason.
+      <br> <b> &lt;em&gt; </b> and <b> &lt;i&gt; </b> tags may also be used alienated from the classics containers - just like &lt;strong&gt; tags:
+    </p>
+
+    <br>
+    &emsp;
+    <em>Este é um texto enfatizado com itálico avulso de containers!</em>
+    <br>
+
+    
+    <h2> &lt;!-- This is how a commented html text looks like! --&gt; </h2>
+    <p> Learning how to use commented text in web-pages source-code has been a greater priority since the first boilerplate (which was fully commented). Therefore, it's also not being covered in this example once again.
+    <br> Even so, the header above is actualy really self-explanatory, though. </p>
+
+    <h2> HTML Identation and Nesting</h2>
+      <p> This Odin Project's lesson also covers Nesting and Indentations importance in a html source-code (the parent/child relationship stablished between elements in further degrees of indentation). However this kind of indentation care and nesting relationship are kind of given to most people even with little knowledge or experience with some of actual the programming languages. 
+      <br> It does worth noting that <strong> indentation, parent-relation and nesting are quite important concepts </strong> and are not be taken lightly or friviously. These concepts may also be way more imporant in HTML and CSS than in actual procedural or functional paradigms programing languages - although I ain't got sufficient knowledge or time to explore it further and precisely yet. </p>
+      <p> <strong> That's perfectly why we are keeping every little code neatly indented and organized! </strong> </p>
+
+
+    </body>
+
+</html>
