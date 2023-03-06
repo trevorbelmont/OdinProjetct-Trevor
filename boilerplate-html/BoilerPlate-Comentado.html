@@ -1,13 +1,16 @@
 <!DOCTYPE html> <!-- DOCTYPE do html5 -->
 
 <!-- 
+  
     Esta página é um exemplo de uso de um boilerplate de HTML5 comentado com todos seus principais elementos e alguns elementos de texto dentro do elmento <body>:
-      
-      
+    ! Nesta página pedagógica não foi seguido, mas o charset deve vir dentro do elemento head antes dos primeiros 1024 bytes (para passar liso nos validadores de HTML)
+    HTML Validator usado inicialmente:      https://validator.w3.org/
+
+
       <!DOCTYPE html>                 # Doctype do html5
       <html>   </html>                # "Root Element" da página <html> da página. Elemento de abertura e fechamento (</html>) onde vão todos so outros elementos.
         <head>                        # Elemento <head> onde se especifica apenas metadados e questões técnicas da página. FECHA COM </head>
-          <meta charset="utf-8">      # Meta elemento que especifica o charset geral dos textos da página. (utf-8 para abrangir várais línguas)
+          <meta charset="UTF-8">      # Meta elemento que especifica EM MAIÚSCULAS o charset geral dos textos da página. (utf-8 para abrangir várais línguas)
           <title> ... </title>        # Meta elemento que determina o título da tab (guia) da página no browser
         </head>                       # Fechamento.
       
@@ -18,18 +21,17 @@
         </body>                       # Fechamento.
       </html>                         # Fechamento.
 
-  *** Boilerplates podem ser feitos automaticamente no VSCode inserindo apenas uma exclamaão ,"!", num arquivo html vazio.
-
+  *** Boilerplates podem ser feitos automaticamente com "Emmet Abbreviation" no VSCode inserindo apenas uma exclamaão ,"!", num arquivo html vazio.
 -->
-
 <html lang="en"> <!-- "lang" define a linguagem do elemento, útil para tecnologias assitivas-->
 
   <head> <!-- head: onde colocamos importantes metadados -->
     <!-- metadados são coisas imporantantes para página, para renderizar correntamente no browser-->
     <!-- não se usa nenhum elemento de conteúdo na head-->
 
-    <meta charset="utf-8"> <!-- charset meta element-->
+    <meta charset="UTF-8"> <!-- charset meta element. Deve estar nos primeiros 1024 bytes do código-gonte-->
     <!-- "charset utf-8" garante que  símbolos de diferentes linguagens sejam exibidos corretamente-->
+    <!-- Por questões de validação, é bom que o charset esteja (dentro do head) nos primeiros 1024 bytes-->
 
     <title> My first browser's tab title: "é Suça!" </title>
     <!-- Meta elemento que determina o título da tab no Browser.-->
