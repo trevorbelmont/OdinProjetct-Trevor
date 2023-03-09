@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title> Hyperlinks and Images</title>
+  </head>
+
+  <body>
+    <style>
+      #topHeader {
+        background-color: black;
+        color: greenyellow;
+        text-align: center;
+      }
+
+      .sectionHeader {
+        background-color: black;
+        color: white;
+        text-align: unset;
+        clear: left;
+      }
+    </style>
+    <section>
+      <h1 id="topHeader"> Handling HyperLinks and Images in HTML</h1>
+      <!-- target="_blank" force the link to be open in another tab -->
+      <a href="https://en.wikipedia.org/wiki/The_Simpsons" target="_blank">
+        <img src="https://pbs.twimg.com/profile_images/1062159674995326976/A-qZiD_c_400x400.jpg"
+          alt="Bart Simpson sat wearing sun glasses and with a quite relaxed posture" style="float:left" width="20%"
+          height="auto">
+      </a>
+      <p>
+        <font size="+3"> This lesson-page exercise handles how to use <strong>&lt;a&gt;</strong> to turn any
+          element or fragment of
+          element
+          (e.g. parts of a texts) into an anchor to another content (page, site, video, img or whatsoever). We are also
+          going to learn how to use the <strong> "href"</strong> attribute to point and direct these anchors to specific
+          locations (url).
+          <br>We are also going to learn how to display images in our sites, be it from our own domain or from
+          another's.
+          Simply combining those techniques we must be able to turn an image an hyperlink too.
+        </font>
+      </p>
+    </section>
+    <br class="sectionHeader">
+    <h2 class="sectionHeader"> Anchors and Hyper-References : &lt;a href="address"&gt;</h2>
+    <p> The <b>&lt;a&gt; ... &lt;/a&gt;</b>, "anchor" elements tags, turns almost every content element between these
+      tags into an anchor to <a href="https://google.com">another page or content</a>. However, just delimiting an
+      anchor with some anchor tags are not enough to point that anchor to any other page or content. Thus, creating only
+      <a href=""> an empty anchor</a> will lead us to nowhere else through a pointless hyperlink.
+      <br> The <strong> target="_blank" </strong> attribute setting in the "anchor" tag defines whether the link shall
+      be open in a new blank tab.
+    </p>
+    <h2> The "href" attribute </h2>
+    <p> In order to point an anchor content, <b>&lt;a&gt;, to its actual destination we add the <strong>
+          "href"</strong> attribute to the anchor element opening tag</b>. This way - be it an image, a text, a button
+      or anything - the anchored element will become a <a href="https://willyoupressthebutton.com/"> clickable visual
+        shortcut </a> to the referenced content address. </p>
+    <h2> Absolute and Relative <a
+        href="https://www.theodinproject.com/lessons/foundations-links-and-images#absolute-and-relative-links">Links</a>
+      in "href"</h2>
+    <p> Depending on whether we're pointing to an address inside or outside our page domain, we will have to use two
+      different types of hyper-referencing - absolute and relative.
+    </p>
+    <ul>
+      <li>
+        <a
+          href="https://www.theodinproject.com/lessons/foundations-links-and-images#absolute-and-relative-links:~:text=our%20own%20websites-,Absolute%20Links,-Links%20to%20pages">
+          <strong>Absolute Links</strong>
+        </a>
+        <text> <br> &emsp;Those are the ones we use to link our content element to a page or address from another domain
+          other than the linking page current domain. Absolute links are supposed to always follow the
+          <b>"protocol://domain/path"</b> pattern. Preferably we must chose "https" protocol over "http" when both are
+          available. "Domain" is literally self-explanatory and "path" is the rest of the address which leads us to the
+          exactly page or content in the given domain that our anchor element is anchored to. E.g.: &emsp;
+          <a
+            href="https://www.techtarget.com/whatis/definition/absolute-link#:~:text=An%20absolute%20link%20is%20a,FTP%20(File%20Transfer%20Protocol).">
+            "https:// + techtarget.com/ + ridiculous-long-path" </a> </text>
+      </li>
+      <li>
+        <a
+          href="https://www.theodinproject.com/lessons/foundations-links-and-images#absolute-and-relative-links:~:text=theodinproject.com/about-,Relative%20Links,-Links%20to%20other">
+          <strong>Relative Links</strong>
+        </a>
+        <text> <br> &emsp;On the other hand, whenever we want to link our elements to another page within our own domain
+          we simply use relative links. Relative links are relative to our domain index and are pointed quite similarly
+          to how we point folders on terminal and powershell: mostly using directories names, bars and typing file
+          extensions. <b>"protocol://domain/path"</b> pattern. Preferably we must chose "https" protocol over "http"
+          when both are available. "Domain" is literally self-explanatory and "path" is the rest of the address which
+          leads us to the exactly page or content in the given domain that our anchor element is anchored to. E.g.:
+          &emsp;
+          <a
+            href="https://www.tutorialspoint.com/How-to-link-pages-using-relative-URL-in-HTML#:~:text=The%20values%20of%20these%20attributes,to%20use%20the%20current%20folder.">
+            "https:// + tutorialspoint.com/ + awful-path" </a> </text>
+      </li>
+    </ul>
+
+    <h3> &emsp; 4 Ways of Indicating Relative Paths </h3>
+
+    <ul>
+      <li> <a href="file.extension">"file.extension"</a> : Used when linking to content in the same folder.</li>
+      <li>
+
+        <ul>
+          <li> <a href="folder/anotherFile.extension">"folder/anotherFile.extension"</a> : Links to the given file
+            content in the given folder path from the current directory forward.</li>
+          <li> <a href="./folder/anotherFile.extension">" ./folder/anotherFile.extension"</a> : Does exactly
+            the same as above but with less risks of crashing.</li>
+        </ul>
+
+      </li>
+      <li> <a href="/lesson-pages/boilerplates-html/Index.html"> (root)/folder/someFile.extension"</a> : Points content
+        relative to the index location. The "/" at the beginning signifies the domain's root folder. </li>
+      <li> <a href="../text_elements/Negritos-Italicos.html"> (parent)../otherFolder/anyFile.extension</a> : Use "../"
+        to ascend to the parent folder and navigate the folder from there on. </li>
+    </ul>
+
+    <h1 class="sectionHeader"> Images, Source and Alt. Descriptions: &lt;img src="adress" alt="description"&gt; </h1>
+    <p> In order to make our site more attractive or achieve specific goals we may probably want to add <a
+        href="https://www.theodinproject.com/lessons/foundations-links-and-images#images"> pictures</a> to our
+      pages.Thus we shall use the self-closing <strong> &lt;img&gt;</strong> element. While HTML has a great variety of
+      elements to handle different types of media contents, the "img" is surely one of the most used. A "img" element
+      must perform 3 types of actions: be the container to the picture media, point the source of the image and provide
+      an alternative description of its image to the ones who can't see or interpret the image visual information. Hence
+      we are going to use at least two attributes in the "img" tag element:</p>
+    <img src="https://www.internetingishard.com/html-and-css/links-and-images/mochi-961ee5.gif"
+      alt="pumping pale smiling emoji">
+    <img src="https://www.internetingishard.com/html-and-css/links-and-images/mochi-961ee5.gif"
+      alt="pumping pale smiling emoji">
+    <img src="https://www.internetingishard.com/html-and-css/links-and-images/mochi-961ee5.gif"
+      alt="pumping pale smiling emoji">
+
+    <h3> &lt; img
+      src = "address"
+      alt = "description"
+      &gt;
+    </h3>
+    <ul>
+      <li> <b>&lt;img&gt;</b>, the image container itself. A self-closing tag. </li>
+      <li> <b>src="address"</b>, attribute which points the relative or absolute path address of the media.</li>
+      <li> <b> alt="description"</b>, attribute which specify the image description in natural language.</li>
+      <li> width = "number", "percentage %", "pixels px", "auto" </li>
+      <li> height = "number", "percentage%", "pixelspx", "auto" </li>
+      <li> max-width: 120% </li>
+
+    </ul>
+
+    <p> In addition to the more common "png" and "jpg" web image file extensions. "svg" (Scalable Vector Graphics) and
+      "gif" (Graphic Interchange Format) are also quite recurrent and main formats when building or surfing pages on
+      internet. </p>
+    <a href="https://www.instagram.com/diasmarcos.jr/">
+      <img src="images/Trevor.jpg" alt="The charming designer of the current page" width="25%" height="auto%">
+    </a>
+
+
+  </body>
+
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<!-- This is an example exercise of basic use of ordered and unordered lists, "ol" and "ul", and list items,"li"-->
+<!-- Most of the comments are going to be in English due to the use of "code spell checker" and English practice. -->
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title> Ordered and Unordered Lists</title>
+  </head>
+
+  <body>
+
+    <h1 class="tcs"> <strong> &lt;ol&gt;, &lt;ul&gt; and &lt;li&gt; :</strong> Ordered and unordered lists and items.
+    </h1>
+
+    <!-- Define basic styles associated to elements id? -->
+    <style>
+      /* Seems like this' a fragment of CSS code. Hence, the comment syntax has changed
+      and ";" are also mandatory after every line. We comment with (/*...* /) */
+
+      /* Define the style of the element with "lns" (listNameStyle) id*/
+      #lns {
+        background-color: black;
+        color: white;
+        text-align: left;
+        padding: unset;
+      }
+
+      /* Define the style of "les" (listElementsStyle) element id */
+      #les {
+        background-color: unset;
+        color: black;
+        padding: unset;
+      }
+
+      /* Element's ids must (almost) always be unique. But sometimes we want to assign the same stiles to multiple elements.
+      That's when HTML Classes may come to be exceptionally handy. We use "." (dot) to define a class style.*/
+
+      /* Define the class style of the ".tcs" (Trevor's Class Style) class*/
+      .tcs {
+        background-color: black;
+        color: rgb(0, 255, 0);
+        padding: unset;
+      }
+    </style>
+
+    <section>
+      <h2 id="lns"> An unordered list <strong> &lt;ul&gt; </strong> with some sub-items: </h2>
+
+      <ul id="les">
+        <!--The "les" id (list element style) was used in the "ul" element to style every list element equally
+    element id must be unique in almost all cases. So attributing the same id to several "li" elements wouldn't be a recommended practice -->
+        <li> <strong> &lt;ul&gt;</strong>, Initiate a unordered list.</li>
+
+        <ul>
+          <li> <strong> &lt;li&gt;</strong> A "list item" element <strong> &lt;/li&gt;</strong>;</li>
+          <li> And another "li";</li>
+          <li> Now there's an &lt;ul&gt;, "unordered list", <strong> nested in the parent one: &lt;ul&gt; </strong>.
+
+            <ul>
+              <li> One nested <b> &lt;ul&gt;</b> item </li>
+              <li> Another nested &lt;ul&gt; item </li>
+              <li> One more nested "ul" list item </li>
+              <li> Let's close this nested unordered list: <b>&lt;/ul&gt;</b>. </li>
+            </ul>
+
+          </li>
+          <li> Resuming the parent "ul" list items; </li>
+          <li> And some other <strong> &lt;li&gt;</strong>, list elements; </li>
+          <li> That's enough unordered list items;</li>
+          <li> Then we close the list: with &lt;/ul&gt; </li>
+        </ul>
+
+        <li> <b>&lt;/ul&gt;</b>, ends the unordered list;</li>
+      </ul>
+
+      <p class="justified"> In the above list section we used the <strong> &lt;style&gt; ... &lt;/style&gt; </strong>
+        element to open a
+        (probably) CSS field in the code and define styles using <strong> "#string-of-the-id" and ".string-of-the-class"
+        </strong> which were attached int the "list" and "item" elements. Every element tagged with <strong>id="string"
+        </strong> or <strong>class="string"</strong>
+        will follow the determined style to each class and id.
+        <br> Element ids are supposed to be unique in the HTML document, then using element classes are rather useful
+        when
+        configuring multi-elements styles.
+        Moreover, beside CSS, JavaScript may also refer to specific HTML elements through their classes and ids. That's
+        also why
+        we should keep our ids and classes coherently organized.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="bwHeaders"> An Ordered list, <strong> &lt;ul&gt; </strong>, of my most liked languages: </h2>
+      <p class="justified"> Now in the following list we are going to define the list elements CSS style after all the
+        HTML list elements.
+        That's just for the sake of showing that styles may be defined separately and even after the element it is
+        defining. This time we won't be using ids to define styles but solely classes.</p>
+
+
+      <ol> <!-- default ordered list -->
+        <li> <b>Strong typed languages:</b>
+          <ol type="I"> <!-- "ol" numbered with uppercase romans-->
+            <li> C# </li>
+            <li> C++ </li>
+            <li> Java </li>
+            <li> C (raw C)</li>
+          </ol>
+        </li>
+        <li> Python </li>
+        <li> JavaScript</li>
+        <li> <b> Unordered sub-list of artistic code frameworks:</b>
+          <ol type="a"> <!-- "ol" ranked with lowercase letters-->
+            <li> Unity libraries (C# framework)</li>
+            <li> Processing (Java framework)</li>
+            <li> OpenFrameWorks (C++ framework)</li>
+          </ol>
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h2 class="bwHeaders"> The "li" value attribute, <strong> &lt;li value="ranking"&gt;</strong> </h2>
+      <p class="justified"> Sometimes we may want to define our list elements ranks precisely or arbitrarily in our
+        ordered lists. In
+        those
+        cases we add the
+        "value" tag to the "li" element. Just inside the &lt;li&gt; opening tag element. We may also use the "start"
+        definition to make our list start at the 60th rank.
+      </p>
+
+
+
+      <ul class="greenItems" type="circle">
+        <li> <b> &lt;ol start="60"&gt;</b></li>
+
+        <ol start="60">
+          <li> 60th rank</li>
+          <li> 61st rank</li>
+          <li value="69"> <b> &lt;li value="69"&gt; </b> </li>
+          <li> 70th rank</li>
+          <li value=""> nth rank</li>
+        </ol>
+
+        <li> <b> &lt;/ol&gt; </b> </li>
+      </ul>
+      <p class="justified"> In this example exercise we tried and experimented further HTML elements and even some CSS
+        style configurations through <b> &lt;style&gt; ... &lt;/style&gt; </b>, <b>id</b> and <b>class</b> to set up some clusters of styling definitions.
+        <br> We also changed this last list items background but this style definition is actually set
+        after
+        the list itself in the code. Even this whole page description text alignment was put as the last lines in the
+        current page source-code (Just below this last line in the source).
+      </p>
+    </section>
+
+    <!-- Defining HTML classes styles to the lists above with CSS -->
+
+    <!-- open a style defining section-->
+    <style>
+      /* define Black and White List names (or headers) */
+      .bwHeaders {
+        background-color: black;
+        color: white;
+        padding: unset;
+        text-align: unset;
+      }
+
+      /*define green items in black background */
+      .greenItems {
+        background-color: black;
+        color: greenyellow;
+        padding: unset;
+      }
+
+      /* define justified alignment to the free text which explain lists in the page. */
+      .justified {
+        text-align: justify;
+        background-color: white;
+        color: unset;
+      }
+    </style>
+
+  </body>
+
+</html>
