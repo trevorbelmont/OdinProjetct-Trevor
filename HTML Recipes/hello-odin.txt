@@ -1,0 +1,8 @@
+A just a file to record important git commands and other meaningful stuff
+
+
+Let's get rid of vim at committing  with this command:
+    git config --global core.editor "code --wait"
+
+Remove files or folders from github repo but keep them locally:
+    git rm --cached <name-of-file>
