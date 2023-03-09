@@ -15,11 +15,31 @@
         color: yellowgreen;
         padding: unset;
         text-align: center;
+        text-decoration: none;
+      }
 
+      /*box container that isn't displayed*/
+      .previewBox {
+        display: none;
+        width: 100%;
+      }
+
+      /*pseudo-class event "a:hover" + over some ".previewBox" classed element = display box (in iframe later)*/
+      a:hover+.previewBox,
+      .previewBox:hover {
+        display: block;
+        z-index: 100;
+        position: relative;
       }
     </style>
 
-    <h1 class="h1Class"> <a href="HTML Recipes/index.html"> Touch the Headers </a> </h1>
+    <!-- Box preview of <a href="link"> retractile -->
+    <h1 class="h1Class"> <a href="HTML Recipes/index.html"> Touch the Headers </a>
+      <div class="previewBox"> <iframe src="HTML Recipes/index.html" width="50%" height="auto"> </iframe></div>
+      <!-- the div element must be placed just after the </a> closing tag
+        The class must be the same as the defined preview block style (previewBox, in this case)-->
+    </h1>
+
     <h2> A root index may be handy at <a href="https://github.io"> github.io. </a> </h2>
 
     <img src="https://www.internetingishard.com/html-and-css/links-and-images/mochi-961ee5.gif"

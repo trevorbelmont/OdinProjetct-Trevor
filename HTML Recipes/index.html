@@ -19,16 +19,36 @@
         color: yellowgreen;
         padding: unset;
         text-align: center;
+      }
 
+      .previewBox {
+        display: none;
+        width: 100%;
+      }
+
+      /* a pseudo-class that correspond to when the user point an element but doesn't activate it. */
+      a:hover+.previewBox,
+      .previewBox:hover {
+        display: block;
+        position: relative;
+        z-index: 100;
       }
     </style>
 
-    <h1 class="h1Class"> TOP HTML Recipe-Exercises Homepage</h1>
+    <h1 class="h1Class"> <a href="../index.html">TOP HTML Recipe-Exercises Homepage</a>
+      <div class="previewBox">
+        <iframe src="../index.html" width="50%" height="auto"> </iframe>
+      </div>
+    </h1>
 
-    <p> The index of Trevor's <a href="https://www.theodinproject.com/about">Odin Project</a> page-exercises. Every lesson page is built as metalinguistic recipe page of the HTML and CSS elements in their own source-codes.
-      <br> Thus, each of these Odin Project's lesson page-exercises are both the exercise itself and an abstract of the same exercise' contents).</p>
+    <p> The index of Trevor's <a href="https://www.theodinproject.com/about">Odin Project</a> page-exercises. Every
+      lesson page is built as metalinguistic recipe page of the HTML and CSS elements in their own source-codes.
+      <br> Thus, each of these Odin Project's lesson page-exercises are both the exercise itself and an abstract of the
+      same exercise' contents).
+    </p>
+
     <ul>
-      <li> <a href="hello-odin.txt"> Hello Odin.txt</a></li>
+      <li> <a href="hello-odin.txt"> Hello Odin.txt</a> </li>
       <li> <a href="Lesson-pages/boilerplates-html/"> Boilerplates </a>
 
         <ul>
